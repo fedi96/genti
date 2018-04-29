@@ -1,0 +1,204 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/exp.css" />
+    <link href="css/cir.css" rel="stylesheet" />
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <title>Genti</title>
+        <!-- Description and Keywords (start) -->
+        <meta content='YOUR DESCRIPTION HERE' name='description'/>
+        <meta content='YOUR KEYWORDS HERE' name='keywords'/>
+        <!-- Description and Keywords (end) -->
+        <meta content='' property='og:site_name'/>
+        <meta content='' name='twitter:domain'/>
+        <meta content='' name='twitter:title'/>
+        <meta content='summary' name='twitter:card'/>
+        <meta content='' name='twitter:title'/>
+        <!-- Social Media meta tag need customer customization -->
+        <meta content='Facebook App ID here' property='fb:app_id'/>
+        <meta content='Facebook Admin ID here' property='fb:admins'/>
+        <meta content='@username' name='twitter:site'/>
+        <meta content='@username' name='twitter:creator'/>
+        <style>
+        .btnn {
+          background: #363940;
+          box-shadow: 0 0 2px 0 rgba(0,0,0,0.14), 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.2);
+        }
+        .btnn.active, .btnn:active {
+          background: #272b32;
+          border-color: #272b32;
+          color: #789948;
+          text-decoration: none;
+        }
+        </style>
+        <script>
+        function rate(n) {
+          var i=0;
+          t="";
+        for(i;i<n;i++){
+            var t = t + '<svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" /></svg>';
+            }
+            document.write(t);
+        }
+        </script>
+</head>
+
+<body ng-app="Portfolio" class="fain">
+    <div class="columns filternav" id="nav">
+        <div class="column col-9 col-mx-auto">
+            <header class="navbar">
+                <section class="navbar-section">
+                    <h2>Genti</h2>
+                </section>
+                <section class="navbar-center">
+                  <a href="#" class="btn"><svg style="width: 32px;height: 18px;" viewBox="2 0 18 18"><path fill="#8bc34ab0" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path></svg>Home</a>
+                  <a href="#" class="btn"><svg style="width: 32px;height: 18px;" viewBox="2 0 18 18"><path fill="#8bc34ab0" d="M18,4L20,8H17L15,4H13L15,8H12L10,4H8L10,8H7L5,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V4H18Z" /></svg>Movies</a>
+                  <a href="#" class="btn"><svg style="width: 32px;height: 18px;" viewBox="2 0 18 18"><path fill="#8bc34ab0" d="M18,9H16V7H18M18,13H16V11H18M18,17H16V15H18M8,9H6V7H8M8,13H6V11H8M8,17H6V15H8M18,3V5H16V3H8V5H6V3H4V21H6V19H8V21H16V19H18V21H20V3H18Z" /></svg>Series</a>
+                </section>
+                <section class="navbar-section">
+                  <div class="input-group input-inline">
+                    <input class="form-input" type="text" placeholder="search">
+                    <button class="btn btn-primary input-group-btn">Search</button>
+                  </div>
+                </section>
+            </header>
+        </div>
+    </div>
+    <div class="columns" ng-controller="MainController">
+        <div class="column col-11 col-9-lms col-mx-auto">
+            <div class="container">
+                <div class="columns">
+                    <div class="column col">
+                        <div class="fain" id="tag-1">
+                            <div class="columns">
+                              <div class="column col-9-xlms col-9-lms portfolio col-9 card col-mx-auto" style="height:90px;" >
+                              </div>
+                              </div>
+                              <div class="columns">
+
+                                <div class="column col-9 portfolio card col-mx-auto" style="height:520px;" >
+                                </div>
+                                <div id="chat" class="column col portfolio card col-mx-auto" style="height:520px;margin: 0 1rem;" >
+                                </div>
+                                <div class="column col-12-xlms col-12-xl col-12-lg col-12-md col-12-sm col-12-xs portfolio col-mx-auto" style="margin:1rem;">
+                                  <center>
+                                    <button class="btn btnn" >
+                                      <svg style="width: 32px;height: 18px;" viewBox="2 0 18 20"><path fill="#8bc34ab0" d="M19,12H22.32L17.37,16.95L12.42,12H16.97C17,10.46 16.42,8.93 15.24,7.75C12.9,5.41 9.1,5.41 6.76,7.75C4.42,10.09 4.42,13.9 6.76,16.24C8.6,18.08 11.36,18.47 13.58,17.41L15.05,18.88C12,20.69 8,20.29 5.34,17.65C2.22,14.53 2.23,9.47 5.35,6.35C8.5,3.22 13.53,3.21 16.66,6.34C18.22,7.9 19,9.95 19,12Z" /></svg>
+                                      Refresh</button>
+                                    <a href="#trailer" class="btn btnn" >
+                                      <svg style="width: 32px;height: 18px;" viewBox="2 0 18 20">
+                                        <path fill="#8bc34ab0" d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z" />
+                                      </svg>Trailer
+                                    </a>
+                                    <button class="btn btnn" >
+                                      <svg style="width: 32px;height: 18px;" viewBox="2 0 18 20">
+                                        <path fill="#8bc34ab0" d="M17,13L12,18L7,13H10V9H14V13M19.35,10.03C18.67,6.59 15.64,4 12,4C9.11,4 6.6,5.64 5.35,8.03C2.34,8.36 0,10.9 0,14A6,6 0 0,0 6,20H19A5,5 0 0,0 24,15C24,12.36 21.95,10.22 19.35,10.03Z" />
+                                      </svg>
+                                      Download
+                                    </button>
+                                    <button class="btn btnn" ><svg style="width: 32px;height: 18px;" viewBox="2 0 18 20">
+                                      <path fill="#8bc34ab0" d="M21,11L14,4V8C7,9 4,14 3,19C5.5,15.5 9,13.9 14,13.9V18L21,11Z" />
+                                    </svg>Share</button>
+                                    <button class="btn btnn" onclick="chat();"><svg style="width: 32px;height: 18px;" viewBox="2 0 18 20">
+                                      <path fill="#8bc34ab0" d="M9.5,4C5.36,4 2,6.69 2,10C2,11.89 3.08,13.56 4.78,14.66L4,17L6.5,15.5C7.39,15.81 8.37,16 9.41,16C9.15,15.37 9,14.7 9,14C9,10.69 12.13,8 16,8C16.19,8 16.38,8 16.56,8.03C15.54,5.69 12.78,4 9.5,4M6.5,6.5A1,1 0 0,1 7.5,7.5A1,1 0 0,1 6.5,8.5A1,1 0 0,1 5.5,7.5A1,1 0 0,1 6.5,6.5M11.5,6.5A1,1 0 0,1 12.5,7.5A1,1 0 0,1 11.5,8.5A1,1 0 0,1 10.5,7.5A1,1 0 0,1 11.5,6.5M16,9C12.69,9 10,11.24 10,14C10,16.76 12.69,19 16,19C16.67,19 17.31,18.92 17.91,18.75L20,20L19.38,18.13C20.95,17.22 22,15.71 22,14C22,11.24 19.31,9 16,9M14,11.5A1,1 0 0,1 15,12.5A1,1 0 0,1 14,13.5A1,1 0 0,1 13,12.5A1,1 0 0,1 14,11.5M18,11.5A1,1 0 0,1 19,12.5A1,1 0 0,1 18,13.5A1,1 0 0,1 17,12.5A1,1 0 0,1 18,11.5Z" />
+                                    </svg>Chatbox</button>
+                                  </center>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="columns">
+                              <div class="column col portfolio col-mx-auto" style="height:330px;margin: 0 1rem;" >
+                                <div class="card-image">
+                                  <img class="img-responsive" src="img/im.jpg" alt="macOS Sierra">
+                                </div>
+                              </div>
+                              <div class="column col-6-xlms col-6-lms portfolio col-6 card " style="height:330px;" >
+                                <div class="card-header">
+                                      <div class="card-title h5 text-center">Backstabbing for Beginners</div>
+                                </div>
+                                <div class="card-body">
+                                        <dl class="dl-horizontal clear-mrg">
+                                                <dt class="text-upper ng-binding">Rate</dt>
+                                                <dd class="ng-binding"><script>rate(5);</script></dd>
+                                                <dt class="text-upper ng-binding">Runtime</dt>
+                                                <dd class="ng-binding">1h 48min</dd>
+                                                <dt class="text-upper ng-binding">Genre</dt>
+                                                <dd class="ng-binding">Thriller</dd>
+
+                                                <dt class="text-upper ng-binding">Actors</dt>
+                                                <dd class="ng-binding">Josh Hutcherson, Ben Kingsley</dd>
+
+                                                <dt class="text-upper ng-binding">Released</dt>
+                                                <dd class="ng-binding">2016</dd>
+
+                                                <dt class="text-upper ng-binding">Language</dt>
+                                                <dd class="ng-binding">English</dd>
+
+
+                                        </dl>
+                                    </div>
+                              </div>
+                              <div class="column col portfolio card col-mx-auto" style="height:330px;margin: 0 1rem;" >
+                              </div>
+                            </div>
+                            <div class="columns">
+                              <div class="column col portfolio card col-mx-auto" style="height:530px;margin: 1rem;" >
+
+                                </div>
+                              </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="trailer">
+              <a href="#modals" class="modal-overlay" aria-label="Close"></a>
+              <div class="modal-container" role="document">
+                <div class="modal-header">
+                  <a href="#modals" class="btn btn-clear float-right" aria-label="Close"></a>
+                  <div class="modal-title h5">Movie title</div>
+                </div>
+                <div class="modal-body">
+                  <div class="content">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/wTQxiGJzR_I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#modals" class="btn btn-link">Close</a>
+                </div>
+              </div>
+    </div>
+    <div class="columns footer">
+        <div class="column col-9 col-mx-auto">
+            <div>
+                copyright &copy; <a href="#">Genti</a> 2018
+            </div>
+        </div>
+    </div>
+    <div id='chatstyle'>
+    </div>
+    <script>
+    var s=0;
+    function chat(){
+      if(s==0){
+        document.getElementById('chatstyle').innerHTML = '<style>#chat{display:none}</style>';
+        s=1;
+      }
+      else{
+        document.getElementById('chatstyle').innerHTML ="";
+        s=0;
+      }
+    }
+    </script>
+        <script src="js/app.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.min.js"></script>
+</body>
+
+</html>
