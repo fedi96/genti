@@ -101,18 +101,14 @@
                                          src="ar"
                                          kind="captions"
                                          srclang="ar"
-                                         label="العربية"
-
-                                       >
+                                         label="Arabic">
 
 
                                        <track
                                          src="en"
                                          kind="captions"
                                          srclang="en"
-                                         label="English"
-
-                                       >
+                                         label="English">
 
 
                                    </video>
@@ -290,7 +286,7 @@
                     }
                 });
 
-                var streamSources = [{"src":"https://forja.tn/hls_movies/tt5478478/sd/manifest.m3u8","type":"application/x-mpegURL","withCredentials":false,"label":"SD"},{"src":"/hls_movies/tt5478478/manifest.m3u8","type":"application/x-mpegURL","withCredentials":false,"label":"HD"}];
+                var streamSources = [{"src":"mainfest.m3u8","type":"application/x-mpegURL","withCredentials":false,"label":"SD"},{"src":"/hls_movies/tt5478478/manifest.m3u8","type":"application/x-mpegURL","withCredentials":false,"label":"HD"}];
 
                     player = videojs('player',{
                       techOrder: ["html5"],
@@ -318,7 +314,7 @@
 
 
 
-                player.overlay({
+                /*player.overlay({
                   overlays:[
                     {
                       class: 'alwaysShown',
@@ -353,7 +349,7 @@
                     }
 
                   ]
-              });
+              });*/
 
 
                 player.watermark({
