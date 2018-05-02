@@ -1,0 +1,80 @@
+/*! videojs-tube - 2016-08-27
+ * Copyright (c) 2016 CodeCanyon
+ * Author by FaceTheme
+ * @version 1.0.0 support videojs-5*/
+.video-js{font-size:13px}.video-js.vjs-fullscreen{font-size:17px}.vjs-big-play-centered .vjs-big-play-button{font-size:7em;line-height:1.34em;height:1.4em;width:1.4em;-webkit-border-radius:50%;-moz-border-radius:50%;border-radius:50%;margin-top:-.7em;margin-left:-.7em}.vjs-big-play-centered .vjs-progress-control{position:absolute;top:0;left:0;margin:0;padding:0;width:100%;height:auto;-webkit-transform:translate(0,-100%);transform:translate(0,-100%)}.video-js .vjs-progress-control:hover .vjs-progress-holder,.video-js:hover .vjs-progress-holder{font-size:2em}.vjs-big-play-centered .vjs-time-divider{display:block}.vjs-big-play-centered .vjs-current-time{display:block;padding-right:0}.vjs-big-play-centered .vjs-remaining-time{margin-right:auto;padding-left:0}.vjs-big-play-centered .vjs-control-bar{background-color:rgba(0,0,0,.2)}.vjs-big-play-centered .vjs-play-progress{ background-color:#f1c40f}.vjs-big-play-centered .vjs-play-progress:before{font-size:1em;top:-.34777777777em}.vjs-big-play-centered .vjs-load-progress{background-color:rgba(255,255,255,.4)}.vjs-big-play-centered .vjs-slider{background-color:rgba(255,255,255,.2)}.vjs-big-play-centered .vjs-play-control:before,.vjs-big-play-centered .vjs-fullscreen-control:before{font-size:2.3em;line-height:1.33}
+.vjs-big-play-centered .vjs-play-progress {
+    background-color: #ff7e00;
+}
+.video-js .vjs-load-progress div {
+    background: rgba(214, 163, 101, 0.75);
+}
+.vjs-menu li {
+    font-size: .9em;
+    line-height: 2.2em;
+}
+
+button.player-custom-button {
+    width: 35px !important;
+    vertical-align: top;
+}
+
+.vjs-loading-spinner{
+  border: 0;
+}
+.vjs-loading-spinner::before, .vjs-loading-spinner::after{
+    display: none;
+}
+
+.vjs-poster{
+    box-shadow: inset 0 0 300px 0px #000;
+    background-size: cover;
+}
+
+.vjs-button:before {
+    transition: color .3s ease !important;
+}
+
+.video-js .vjs-control:focus, .video-js .vjs-control:focus:before, .video-js .vjs-button:hover:before {
+    text-shadow: inherit;
+}
+
+.vjs-button:hover:before {
+    color: #ff7e00;
+}
+
+.vjs-volume-level{
+    background: #ff7e00 !important;
+    color: #ff7e00;
+}
+
+.video-js .vjs-mouse-display:after, .video-js .vjs-play-progress:after, .video-js .vjs-time-tooltip {
+    background: #ff7e00;
+    color: white;
+}
+
+.video-js:hover .vjs-big-play-button{
+    background-color: rgba(255, 126, 0, 0.43);
+}
+
+.vjs-overlay-center-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vjs-overlay.alwaysShown{
+    opacity: 1 !important;
+    background: transparent !important;
+}
+
+.vjs-current-time.vjs-time-control.vjs-control, .vjs-time-control.vjs-time-divider, .vjs-remaining-time.vjs-time-control.vjs-control {
+	display: none;
+}
+
+
+@media (min-width:500px) {
+	.vjs-current-time.vjs-time-control.vjs-control, .vjs-time-control.vjs-time-divider, .vjs-remaining-time.vjs-time-control.vjs-control {
+		display: block;
+	}
+}

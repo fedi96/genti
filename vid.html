@@ -1,0 +1,660 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/exp.css" />
+    <link href="css/cir.css" rel="stylesheet" />
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <title>Genti</title>
+        <!-- Description and Keywords (start) -->
+        <meta content='YOUR DESCRIPTION HERE' name='description'/>
+        <meta content='YOUR KEYWORDS HERE' name='keywords'/>
+        <!-- Description and Keywords (end) -->
+        <meta content='' property='og:site_name'/>
+        <meta content='' name='twitter:domain'/>
+        <meta content='' name='twitter:title'/>
+        <meta content='summary' name='twitter:card'/>
+        <meta content='' name='twitter:title'/>
+        <!-- Social Media meta tag need customer customization -->
+        <meta content='Facebook App ID here' property='fb:app_id'/>
+        <meta content='Facebook Admin ID here' property='fb:admins'/>
+        <meta content='@username' name='twitter:site'/>
+        <meta content='@username' name='twitter:creator'/>
+        <style>
+        .btnn {
+          background: #363940;
+          box-shadow: 0 0 2px 0 rgba(0,0,0,0.14), 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 3px 0 rgba(0,0,0,0.2);
+        }
+        .btnn.active, .btnn:active {
+          background: #272b32;
+          border-color: #272b32;
+          color: #789948;
+          text-decoration: none;
+        }
+        </style>
+        <script>
+        function rate(n) {
+          var i=0;
+          t="";
+        for(i;i<n;i++){
+            var t = t + '<svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="#000000" d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z" /></svg>';
+            }
+            document.write(t);
+        }
+        </script>
+      <link type="text/css" rel="stylesheet" href="videojs/video-js.min.css">
+      <link type="text/css" rel="stylesheet" href="videojs/videojs.vast.vpaid.min.css">
+      <link type="text/css" rel="stylesheet" href="videojs/videojs-overlay.css">
+      <link type="text/css" rel="stylesheet" href="videojs/videojs.socialShare.css" >
+      <link type="text/css" rel="stylesheet" href="videojs/videojs-watermark.css" >
+      <link type="text/css" rel="stylesheet" href="videojs/videojs-tube.min.css">
+      <link type="text/css" rel="stylesheet" href="videojs/videojs-chromecast.css">
+      <link type="text/css" rel="stylesheet" href="videojs/videojs-resolution-switcher.min.css">
+
+
+        <link href="bubbles.css" rel="stylesheet" />
+        <script type="text/javascript" src="bubbles.js"></script>
+</head>
+
+<body ng-app="Portfolio" class="fain">
+    <div class="columns filternav" id="nav">
+        <div class="column col-9 col-mx-auto">
+            <header class="navbar">
+                <section class="navbar-section">
+                    <h2>Genti</h2>
+                </section>
+                <section class="navbar-center">
+                  <a href="#" class="btn"><svg style="width: 32px;height: 18px;" viewBox="2 0 18 18"><path fill="#8bc34ab0" d="M10,20V14H14V20H19V12H22L12,3L2,12H5V20H10Z"></path></svg>Home</a>
+                  <a href="#" class="btn"><svg style="width: 32px;height: 18px;" viewBox="2 0 18 18"><path fill="#8bc34ab0" d="M18,4L20,8H17L15,4H13L15,8H12L10,4H8L10,8H7L5,4H4A2,2 0 0,0 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V4H18Z" /></svg>Movies</a>
+                  <a href="#" class="btn"><svg style="width: 32px;height: 18px;" viewBox="2 0 18 18"><path fill="#8bc34ab0" d="M18,9H16V7H18M18,13H16V11H18M18,17H16V15H18M8,9H6V7H8M8,13H6V11H8M8,17H6V15H8M18,3V5H16V3H8V5H6V3H4V21H6V19H8V21H16V19H18V21H20V3H18Z" /></svg>Series</a>
+                </section>
+                <section class="navbar-section">
+                  <div class="input-group input-inline">
+                    <input class="form-input" type="text" placeholder="search">
+                    <button class="btn btn-primary input-group-btn">Search</button>
+                  </div>
+                </section>
+            </header>
+        </div>
+    </div>
+    <div class="columns" ng-controller="MainController">
+        <div class="column col-11 col-9-lms col-mx-auto">
+            <div class="container">
+                <div class="columns">
+                    <div class="column col">
+                        <div class="fain" id="tag-1">
+                            <div class="columns">
+                              <div class="column col-9-xlms col-9-lms portfolio col-9 card col-mx-auto" style="height:90px;" >
+                              </div>
+                              </div>
+                              <div class="columns">
+
+                                <div class="column col-9 portfolio card col-mx-auto" style="height:520px;" >
+                                  <video id="player"
+                                     class="video-js vjs-big-play-centered vjs-16-9"
+                                     poster="https://assets.fanart.tv/fanart/movies/384680/moviebackground/hostiles-5a56ee839f7d9.jpg">
+
+                                       <track
+                                         src="ar"
+                                         kind="captions"
+                                         srclang="ar"
+                                         label="العربية"
+
+                                       >
+
+
+                                       <track
+                                         src="en"
+                                         kind="captions"
+                                         srclang="en"
+                                         label="English"
+
+                                       >
+
+
+                                   </video>
+
+                                </div>
+                                <div id="chat" class="column col portfolio card col-mx-auto" style="height:520px;margin: 0 1rem;" >
+                                </div>
+                                <div class="column col-12-xlms col-12-xl col-12-lg col-12-md col-12-sm col-12-xs portfolio col-mx-auto" style="margin:1rem;">
+                                  <center>
+                                    <button class="btn btnn" >
+                                      <svg style="width: 32px;height: 18px;" viewBox="2 0 18 20"><path fill="#8bc34ab0" d="M19,12H22.32L17.37,16.95L12.42,12H16.97C17,10.46 16.42,8.93 15.24,7.75C12.9,5.41 9.1,5.41 6.76,7.75C4.42,10.09 4.42,13.9 6.76,16.24C8.6,18.08 11.36,18.47 13.58,17.41L15.05,18.88C12,20.69 8,20.29 5.34,17.65C2.22,14.53 2.23,9.47 5.35,6.35C8.5,3.22 13.53,3.21 16.66,6.34C18.22,7.9 19,9.95 19,12Z" /></svg>
+                                      Refresh</button>
+                                    <a href="#trailer" class="btn btnn" >
+                                      <svg style="width: 32px;height: 18px;" viewBox="2 0 18 20">
+                                        <path fill="#8bc34ab0" d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.5,18.78 17.18,18.84C15.88,18.91 14.69,18.94 13.59,18.94L12,19C7.81,19 5.2,18.84 4.17,18.56C3.27,18.31 2.69,17.73 2.44,16.83C2.31,16.36 2.22,15.73 2.16,14.93C2.09,14.13 2.06,13.44 2.06,12.84L2,12C2,9.81 2.16,8.2 2.44,7.17C2.69,6.27 3.27,5.69 4.17,5.44C4.64,5.31 5.5,5.22 6.82,5.16C8.12,5.09 9.31,5.06 10.41,5.06L12,5C16.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z" />
+                                      </svg>Trailer
+                                    </a>
+                                    <button class="btn btnn" >
+                                      <svg style="width: 32px;height: 18px;" viewBox="2 0 18 20">
+                                        <path fill="#8bc34ab0" d="M17,13L12,18L7,13H10V9H14V13M19.35,10.03C18.67,6.59 15.64,4 12,4C9.11,4 6.6,5.64 5.35,8.03C2.34,8.36 0,10.9 0,14A6,6 0 0,0 6,20H19A5,5 0 0,0 24,15C24,12.36 21.95,10.22 19.35,10.03Z" />
+                                      </svg>
+                                      Download
+                                    </button>
+                                    <button class="btn btnn" ><svg style="width: 32px;height: 18px;" viewBox="2 0 18 20">
+                                      <path fill="#8bc34ab0" d="M21,11L14,4V8C7,9 4,14 3,19C5.5,15.5 9,13.9 14,13.9V18L21,11Z" />
+                                    </svg>Share</button>
+                                    <button class="btn btnn" onclick="chat();"><svg style="width: 32px;height: 18px;" viewBox="2 0 18 20">
+                                      <path fill="#8bc34ab0" d="M9.5,4C5.36,4 2,6.69 2,10C2,11.89 3.08,13.56 4.78,14.66L4,17L6.5,15.5C7.39,15.81 8.37,16 9.41,16C9.15,15.37 9,14.7 9,14C9,10.69 12.13,8 16,8C16.19,8 16.38,8 16.56,8.03C15.54,5.69 12.78,4 9.5,4M6.5,6.5A1,1 0 0,1 7.5,7.5A1,1 0 0,1 6.5,8.5A1,1 0 0,1 5.5,7.5A1,1 0 0,1 6.5,6.5M11.5,6.5A1,1 0 0,1 12.5,7.5A1,1 0 0,1 11.5,8.5A1,1 0 0,1 10.5,7.5A1,1 0 0,1 11.5,6.5M16,9C12.69,9 10,11.24 10,14C10,16.76 12.69,19 16,19C16.67,19 17.31,18.92 17.91,18.75L20,20L19.38,18.13C20.95,17.22 22,15.71 22,14C22,11.24 19.31,9 16,9M14,11.5A1,1 0 0,1 15,12.5A1,1 0 0,1 14,13.5A1,1 0 0,1 13,12.5A1,1 0 0,1 14,11.5M18,11.5A1,1 0 0,1 19,12.5A1,1 0 0,1 18,13.5A1,1 0 0,1 17,12.5A1,1 0 0,1 18,11.5Z" />
+                                    </svg>Chatbox</button>
+                                  </center>
+                                </div>
+                            </div>
+                            <br/>
+                            <div class="columns">
+                              <div class="column col portfolio col-mx-auto" style="height:330px;margin: 0 1rem;" >
+                                <div class="card-image">
+                                  <img class="img-responsive" src="img/im.jpg" alt="macOS Sierra">
+                                </div>
+                              </div>
+                              <div class="column col-6-xlms col-6-lms portfolio col-6 card " style="height:330px;" >
+                                <div class="card-header">
+                                      <div class="card-title h5 text-center">Backstabbing for Beginners</div>
+                                </div>
+                                <div class="card-body">
+                                        <dl class="dl-horizontal clear-mrg">
+                                                <dt class="text-upper ng-binding">Rate</dt>
+                                                <dd class="ng-binding"><script>rate(5);</script></dd>
+                                                <dt class="text-upper ng-binding">Runtime</dt>
+                                                <dd class="ng-binding">1h 48min</dd>
+                                                <dt class="text-upper ng-binding">Genre</dt>
+                                                <dd class="ng-binding">Thriller</dd>
+
+                                                <dt class="text-upper ng-binding">Actors</dt>
+                                                <dd class="ng-binding">Josh Hutcherson, Ben Kingsley</dd>
+
+                                                <dt class="text-upper ng-binding">Released</dt>
+                                                <dd class="ng-binding">2016</dd>
+
+                                                <dt class="text-upper ng-binding">Language</dt>
+                                                <dd class="ng-binding">English</dd>
+
+
+                                        </dl>
+                                    </div>
+                              </div>
+                              <div class="column col portfolio card col-mx-auto" style="height:330px;margin: 0 1rem;" >
+                              </div>
+                            </div>
+                            <div class="columns">
+                              <div class="column col portfolio card col-mx-auto" style="height:530px;margin: 1rem;" >
+
+                                </div>
+                              </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="trailer">
+              <a href="#modals" class="modal-overlay" aria-label="Close"></a>
+              <div class="modal-container" role="document">
+                <div class="modal-header">
+                  <a href="#modals" class="btn btn-clear float-right" aria-label="Close"></a>
+                  <div class="modal-title h5">Movie title</div>
+                </div>
+                <div class="modal-body">
+                  <div class="content">
+                    <iframe width="100%" height="350" src="https://www.youtube.com/embed/wTQxiGJzR_I" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <a href="#modals" class="btn btn-link">Close</a>
+                </div>
+              </div>
+    </div>
+    <div class="columns footer">
+        <div class="column col-9 col-mx-auto">
+            <div>
+                copyright &copy; <a href="#">Genti</a> 2018
+            </div>
+        </div>
+    </div>
+    <div id='chatstyle'>
+    </div>
+    <script>
+    var s=0;
+    function chat(){
+      if(s==0){
+        document.getElementById('chatstyle').innerHTML = '<style>#chat{display:none}</style>';
+        s=1;
+      }
+      else{
+        document.getElementById('chatstyle').innerHTML ="";
+        s=0;
+      }
+    }
+    </script>
+        <script src="js/app.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="videojs/subtitles.parser.min.js"></script>
+        <script type="text/javascript" src="videojs/video.min.js"></script>
+        <script type="text/javascript" src="videojs/videojs_5.vast.vpaid.min.js"></script>
+        <script type="text/javascript" src="videojs/videojs.hotkeys.min.js"></script>
+        <script type="text/javascript" src="videojs/videojs.socialShare.js"></script>
+        <script type="text/javascript" src="videojs/videojs-overlay.js"></script>
+        <script type="text/javascript" src="videojs/videojs-watermark.min.js"></script>
+        <script type="text/javascript" src="videojs/videojs-resolution-switcher.min.js"></script>
+        <script type="text/javascript" src="videojs/videojs-contrib-hls.min.js"></script>
+        <script type="text/javascript">
+
+            $(function()
+            {
+                var subtitles_delay_minus = $('<button class="vjs-control vjs-button player-custom-button" type="button" aria-live="polite" title="Next Episode" aria-disabled="false"><i class="fa fa-minus" aria-hidden="true"  style="font-size:16px !important;width:12px;"></i></button>');
+                var subtitles_delay_plus = $('<button class="vjs-control vjs-button player-custom-button" type="button" aria-live="polite" title="Next Episode" aria-disabled="false"><i class="fa fa-plus" aria-hidden="true"  style="font-size:16px !important;width:12px;"></i></button>');
+                var subtitles_delay_text = $('<div style="color:white;width:30px;text-align:center;display:inline-block;overflow-x:hidden;">0.0</div>');
+                var subtitles_delay = $('<li aria-checked="false" aria-disabled="false" aria-live="polite" class="vjs-menu-item" role="menuitemcheckbox" tabindex="-1" title=" "></li>');
+
+
+
+                var subSize = $('<li aria-checked="false" aria-disabled="false" aria-live="polite" class="vjs-menu-item" role="menuitemcheckbox" tabindex="-1" title=" "></li>');
+                var subSize_now = 30;
+                var subSize_plus = $('<button class="vjs-control vjs-button player-custom-button" type="button" aria-live="polite" title="Bigger Size" aria-disabled="false"><i class="fa fa-plus" aria-hidden="true"  style="font-size:16px !important;width:12px;"></i></button>');
+                var subSize_minus = $('<button class="vjs-control vjs-button player-custom-button" type="button" aria-live="polite" title="Smaller Size" aria-disabled="false"><i class="fa fa-minus" aria-hidden="true"  style="font-size:16px !important;width:12px;"></i></button>');
+                var subSize_text = $('<div style="color:white;width:30px;text-align:center;display:inline-block;overflow-x:hidden;">'+subSize_now+'px</div>');
+
+                subSize_plus.off("mousedown").on("mousedown",function(){
+                  subSize_now++;
+                  $("head").append('<style>.vjs-text-track-display div > div > div{ font-size: '+subSize_now+'px !important; }</style>');
+                  subSize_text.html(subSize_now+"px");
+                });
+                subSize_minus.off("mousedown").on("mousedown",function(){
+                  subSize_now--;
+                  $("head").append('<style>.vjs-text-track-display div > div > div{ font-size: '+subSize_now+'px !important; }</style>');
+                  subSize_text.html(subSize_now+"px");
+                });
+                subSize.append(["<strong style='text-transform:none;'>Subtitles Size</strong><br>",subSize_minus,subSize_text,subSize_plus]);
+
+                var subBackground = $('<li aria-checked="false" aria-disabled="false" aria-live="polite" class="vjs-menu-item" role="menuitemcheckbox" tabindex="-1" title=" "></li>');
+                var subBackground_now = "rgba(0,0,0,1)";
+                var subBackground_text = $('<div data-actif="on" style="color:white;width:32px;text-align:center;display:inline-block;overflow-x:hidden;"><input type="checkbox" checked />On</div>');
+                subBackground.append(["<strong style='text-transform:none;'>Background</strong><br>",subBackground_text]);
+                subBackground_text.off("mousedown").on("mousedown", function() {
+                    if($(this).attr("data-actif")=="on") {
+                        $("head").append('<style>.vjs-text-track-display div > div > div{ background: transparent !important; }</style>');
+                        subBackground_text.html('<input type="checkbox"/>Off');
+                        $(this).attr("data-actif", "off");
+                    }
+                    else {
+                        $("head").append('<style>.vjs-text-track-display div > div > div{ background: '+subBackground_now+' !important; }</style>');
+                        subBackground_text.html('<input type="checkbox" checked/>On');
+                        $(this).attr("data-actif", "on");
+                    }
+                });
+
+                var streamSources = [{"src":"https://forja.tn/hls_movies/tt5478478/sd/manifest.m3u8","type":"application/x-mpegURL","withCredentials":false,"label":"SD"},{"src":"/hls_movies/tt5478478/manifest.m3u8","type":"application/x-mpegURL","withCredentials":false,"label":"HD"}];
+
+                    player = videojs('player',{
+                      techOrder: ["html5"],
+                      withCredentials: false,
+                      "controls": true,
+                      "fluid": true,
+                      "html5":{
+                        withCredentials: false,
+                        "nativeTextTracks": true,
+                        // "nativeVideoTracks": false,
+                        // "nativeAudioTracks": false,
+                        "hls": {
+                            // overrideNative: true
+                            withCredentials: false,
+                        }
+                      },
+                      "plugins": {
+                        "videoJsResolutionSwitcher": {
+                          "default": 'high',
+                          "dynamicLabel": true
+                        }
+                      },
+                      sources: streamSources
+                    });
+
+
+
+                player.overlay({
+                  overlays:[
+                    {
+                      class: 'alwaysShown',
+                      start: 'movieNotReadyYet',
+                      end: '',
+                      background: false,
+                      align: 'bottom',
+                      content: '<h2 style="background: #00000091;margin-top: 40px;font-size: 1.6em;padding: 20px 0;">Movie is not ready yet, Come back later</h2>',
+                    },
+                    {
+                      class: 'alwaysShown',
+                      start: 2,
+                      end: 8,
+                      background: false,
+                      align: 'bottom',
+                      content: '<p style="font-size:1.8em;position: absolute;bottom: 80px;left: 85px;"><img src="/logoHeader.png" title="" alt="" height="32px" style="margin-bottom:5px;"><br><b> <i class="fa fa-smile-o" aria-hidden="true" style="color: white !important;" ></i>  فرجة طيبة </b></p>',
+                    },
+                    {
+                      class: 'alwaysShown',
+                      start: 'fullscreenOn',
+                      end: 'fullscreenOff',
+                      background: false,
+                      align: 'bottom',
+                    },
+
+                    {
+                      class: 'alwaysShown',
+                      start: 'HDSwitch',
+                      end: '',
+                      content: '<div style="padding: 12px;background: rgba(0,0,0,.5);border-radius: 7px;" ><h5 style="line-height: 1.5;text-transform: uppercase;">Become VIP to watch in HD</h5><a class="btn btn-default" data-toggle="modal" data-target="#modal-sms">Watch HD</a></div>',
+                      align: 'center-center'
+                    }
+
+                  ]
+              });
+
+
+                player.watermark({
+                  image: '/logoHeader-xs.png',
+                  position: 'top-right',
+                  url:'/'
+                  });
+
+
+                if(streamSources.length===0 && player){
+                  player.trigger("movieNotReadyYet");
+                }
+
+
+
+                var custom_subtitles_counter = 1 ;
+
+
+                player.ready(function() {
+
+                    var hls = player.tech({ IWillNotUseThisInPlugins: true }).hls;
+                    var bandwidth = 0;
+                    var first_play = true;
+                    var wait_progress = 0;
+                    var video = $("#player_html5_api")[0];
+                    var lastCurrentTime = -1;
+                    var preload_media = false;
+                    player.on('play', function(){
+                        if(first_play){
+                            ga('send', {
+                                hitType: 'event',
+                                eventCategory: 'Movie',
+                                eventAction: "Playing Hostiles",
+                                eventLabel: "Playing Hostiles"
+                            });
+                            var last_tmp_currentTime = 0 ;
+                            var last_tmp_duration = player.duration();
+                            player.on('timeupdate', function () {
+                              last_tmp_currentTime = parseInt(this.currentTime());
+                              if(window.socket){
+                                var nowTime = new Date(null);
+                                nowTime.setSeconds(parseInt(this.currentTime()));
+                                nowTime = nowTime.toISOString().substr(11, 8);
+                                $(".chatMe .watchingTime").text(nowTime);
+                                socket.emit("watch", nowTime);
+                              }
+                            });
+
+                                $.post("/api/get/user/movie/seek/tt5478478",function(data)
+                                {
+                                    if(data.status == 200){
+                                        var seek = parseFloat(data.data.time);
+                                        var seekStart = seek -4;
+                                        var seekEnd = player.duration() - 4;
+                                        if(player && seek>0){
+                                            player._seekLastTime = seek;
+                                            console.log(seekStart, seek, seekEnd);
+                                            if(seekStart > 0 && seek < seekEnd)player.currentTime(seek);
+                                           }
+                                    }
+                                    setInterval(function(){
+                                        if(last_tmp_currentTime>2){
+                                            $.post("https://forja.tn/api/update/user/movie/seek/tt5478478",
+                                            {
+                                                title       : "Hostiles",
+                                                url         : window.location.href ,
+                                                time        : last_tmp_currentTime,
+                                                percentage  : (last_tmp_currentTime*100)/last_tmp_duration
+                                            });
+                                        }
+                                    }, 10000, last_tmp_currentTime);
+                                });
+
+                        }
+                        first_play = false;
+                        $('#preload_media').removeClass('disabled');
+                        $('#preload_cover').hide();
+                        if(lastCurrentTime>-1 && preload_media)video.currentTime = lastCurrentTime;
+                        preload_media = false;
+                    });
+
+                    $('#preload_media').click(function(){
+                        $(this).addClass('disabled');
+                        // player.pause();
+                        player.muted(true);
+                        $('#preload_cover').show();
+                        lastCurrentTime = video.currentTime;
+                        preload_media = true;
+                        var preload_percent = parseFloat(video.currentTime / video.duration * 100).toFixed(2);
+                        $("#preload_text").text('Preloading...'+preload_percent+'%');
+                        video.currentTime = video.currentTime + 1;
+                    });
+
+                    $("#preload_stop").click(function() {
+                        player._stopPreload();
+                    });
+
+                    player._stopPreload = function() {
+                        player.pause();
+                        player.muted(false);
+                        preload_media = false;
+                        $('#preload_cover').hide();
+                        video.currentTime = lastCurrentTime;
+                    };
+
+                    player._movePreload = function() {
+                      if(preload_media) {
+                        if(video.currentTime+1 < video.duration) {
+                          var preload_percent = parseFloat(video.currentTime / video.duration * 100).toFixed(2);
+                          $("#preload_text").text('Preloading...'+preload_percent+'%');
+                          video.currentTime = video.currentTime + 1;
+                        }else {
+                          player._stopPreload();
+                        }
+                      }
+                    }
+
+
+
+                    function formatBytes(bytes,decimals) {
+                       if(bytes == 0) return '0 Bytes';
+                       var k = 1024,
+                           dm = decimals || 2,
+                           sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'],
+                           i = Math.floor(Math.log(bytes) / Math.log(k));
+                       return parseFloat((bytes / Math.pow(k, i)).toFixed(dm)) + ' ' + sizes[i];
+                    }
+
+                    player.on('seeked', function() {
+                      // console.log('seeked');
+                      if(preload_media){
+                        player._movePreload();
+                      }
+                    });
+
+
+                    player.on('error', function(e) {
+                      var error = this.player().error();
+                      ga('send', {
+                        hitType: 'event',
+                        eventCategory: 'Error Player',
+                        eventAction: "Error Movies: "+error.code+" ## "+error.message,
+                        eventLabel: window.location.href+", current:"+ player._seekLastTime
+                      });
+                    });
+
+
+                    player.trackTimeOffset = 0;
+                    $(".vjs-loading-spinner").append('<div class="spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>');
+
+
+                    player.hotkeys({
+                      volumeStep: 0.1,
+                      seekStep: 5,
+                    });
+
+
+                      player.on('resolutionchange', function(){
+                        // console.log("resolution change");
+                        var label = player.currentResolution().label;
+                        if(label === "HD") {
+                          player.pause();
+                          player.trigger("HDSwitch");
+                          player.reset();
+                        }
+                      });
+
+
+                    player.on("fullscreenchange", function(){
+                        if(webrtc){
+                            if(player.isFullscreen()) {
+                                player.trigger("fullscreenOn");
+                                webrtc._fullScreenOn();
+                            }
+                            else {
+                                webrtc._fullScreenOff();
+                                player.trigger("fullscreenOff");
+                            }
+                        }
+                    });
+
+                    player.socialShare({
+                        facebook:
+                        {
+                            shareText: "In 1892, a legendary Army captain reluctantly agrees to escort a Cheyenne chief and his family through dangerous territory."
+                        },
+                        twitter: {
+                            handle: "forjaTN",
+                            shareText: "Watch Hostiles now on Forja"
+                        }
+                    });
+
+                    $(".vjs-big-play-button").on("click",function() {
+                        // $(this).off("click");
+                      //$.post("https://forja.tn/api/update/movie/watched/tt5478478");
+                    });
+
+
+                    var menu_settings = $(
+                    '<div aria-disabled="false" aria-expanded="false" aria-haspopup="true" aria-label="Settings" aria-live="polite" class=" vjs-icon-cog vjs-menu-button vjs-menu-button-popup vjs-control vjs-button" role="menuitem" tabindex="0" title="Settings">'+
+
+                    '   <div class="vjs-menu" role="presentation">'+
+                    '       <ul class="vjs-menu-content" role="menu">'+
+                    '       </ul>'+
+                    '   </div>'+
+                    '</div>');
+
+                    subtitles_delay_minus.off("mousedown").on("mousedown",function(){
+                        edit_cues_time(false,function(){
+                            subtitles_delay_text.html(player.trackTimeOffset.toFixed(2).padLeftSerie(2));
+                        });
+                    });
+                    subtitles_delay_plus.off("mousedown").on("mousedown",function(){
+                        edit_cues_time(true,function(){
+                            subtitles_delay_text.html(player.trackTimeOffset.toFixed(2).padLeftSerie(2));
+                        });
+                    });
+
+                    function edit_cues_time(is_plus,callback){
+                        var value_to_add = is_plus ? 0.25 : -0.25;
+                        var tracks = player.textTracks().tracks_;
+                        player.trackTimeOffset += value_to_add;
+                        for(var i=0;i<tracks.length;i++){
+                            if(tracks[i].cues){
+                                for(j=0;j<tracks[i].cues.length;j++){
+                                    tracks[i].cues[j].startTime += value_to_add;
+                                    tracks[i].cues[j].endTime += value_to_add;
+                                }
+                            }
+                        }
+                        callback();
+                    }
+
+                    var custom_subtitles_li = $('<li id="add-subtitle-button-player" tabindex="-1" role="menuitemcheckbox" aria-live="polite" aria-disabled="false" aria-checked="false">Add Subtitle<span class="vjs-control-text">, Add custom subtitles</span></li>');
+
+                    custom_subtitles_li.on("click",function(){
+                        $("#custom-subtitles-button").click();
+                    });
+
+                    document.getElementById('custom-subtitles-button').addEventListener('change', function(evt){
+                        var files = evt.target.files;
+                        var file = files[0];
+                        var reader = new FileReader();
+                        reader.onload = function()
+                        {
+                            var data = parser.fromSrt(this.result);
+                            var track = player.addTextTrack("captions", "Custom Subtitle "+custom_subtitles_counter,"mouadh");
+                            var tracks = player.textTracks();
+                            data.forEach(function(track_cue)
+                            {
+                                track.addCue(
+                                    new VTTCue(
+                                        track_cue.startTime.replace(",",".").toSeconds(),
+                                        track_cue.endTime.replace(",",".").toSeconds(),
+                                        track_cue.text));
+                            });
+                            for (var i = 0; i < tracks.length; i++)
+                            {
+                                if (tracks[i].kind === 'captions')
+                                    tracks[i].mode = 'hidden';
+                            }
+                            custom_subtitles_counter++;
+
+                            track.mode = 'showing';
+                        }
+                        reader.readAsText(file);
+                    }, false);
+
+
+                    subtitles_delay.append(["<strong style='text-transform:none;'>Subtitles delay</strong><br>",subtitles_delay_minus,subtitles_delay_text,subtitles_delay_plus]);
+
+                    menu_settings.find("ul").append([subBackground, subSize, subtitles_delay, custom_subtitles_li]);
+                    $(".vjs-custom-control-spacer.vjs-spacer").after(menu_settings);
+                    setTimeout(function() {
+                        $(".vjs-texttrack-settings").remove();
+                    }, 3000);
+                });
+            });
+
+            function roundHalf(num) {
+                return Math.round(num*2)/2;
+            }
+
+            String.prototype.toSeconds = function () {
+                if (!this)
+                    return null;
+                var hms = this.split(':');
+                return (+hms[0]) * 60 * 60 + (+hms[1]) * 60 + (+hms[2] || 0);
+            }
+
+            Number.prototype.padLeftSerie = function (n,str){
+                return Array(n-String(this).length+1).join(str||'0')+this;
+            }
+
+            String.prototype.padLeftSerie= function(len, c){
+                var s= this, c= c || '0';
+                while(s.length< len) s= c+ s;
+                return s;
+            }
+        </script>
+
+</body>
+
+</html>
